@@ -56,6 +56,7 @@ nColorConvert is leveraged to convert source images into a valid color space.
  5. if you would like to process an individual file, Run the following command from the root directory, nColorConvert.exe --res 640x400 --image image_name
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture4.gif)
+
 Figure 4 NColorConvert Execution
 
 Notes:
@@ -75,6 +76,7 @@ GalleryPalette2Bin converts the resulting color space files into a binary format
 Note:  The resulting bin files are ready for transfer to the mobile application.
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture5.gif)
+
 Figure 5 GalleryPaletteConvert Execution
 
 
@@ -106,26 +108,33 @@ Figure 7 Program Execution for Android Device
 # Mobile Application
 
 The mobile application implements the specification as outlined in the Application Interface Documentation.  The interface offers options to connect to the device, select the device slot of interest, and offers a menu of associated management actions for cards.
+
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture8.png)
+
 Figure 8 Mobile Application Interface
 
 ## Connect to Device
 
 This method Initiates Bluetooth Scanning, and pairs with the development board.  Click this button once the device is powered and awaiting connection.  Upon a successful connection, the connect button is disabled, the remaining buttons are activated, and the scanning process stops.  
+
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture9.png)
+
 Figure 9 Button State after Connecting
 
 ## Write Card
 
 This method loads a source file into memory and transfers it to the selected card slot.  Cards are pulled from the embedded resources folder inside of the EinkStarter project.  Copy the bin files that resulted from executing GalleryPallette2Bin into the DigmeStarter\EmbeddedResources .
+
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture10.png)
 Figure 10 Embedded Resources Folder
 
 After copying files to this folder, right click on each file and set its type to embedded resource and copy always.
+
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture11.png)
 Figure 11 Embedded Resources Setting
 
 Images are loaded at runtime and are available in the 2nd dropdown.  Select desired device slot, along with the image name.  Click the write card button to initiate the transfer process.  The card is divided into chunks based on the connection NTU.  Each chunk is set over one by one until they have been sent as per the application interface specification.  In the example in Figure 12, ad1_fb_packed.bin has been written to Slot 1 on the device.
+
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture12.gif)
 Figure 12 Writing Card Sequence
 
