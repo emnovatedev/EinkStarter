@@ -1,0 +1,1 @@
+.\GalleryPalette2BIN.exe --epd AC040TC1

@@ -1,0 +1,92 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Cards\**" />
+    <EmbeddedResource Remove="Models\Cards\**" />
+    <None Remove="Models\Cards\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Enums\CardGroup.cs" />
+    <Compile Remove="Enums\DeviceType.cs" />
+    <Compile Remove="Enums\OrchestratorStatus.cs" />
+    <Compile Remove="Enums\SagaStatus.cs" />
+    <Compile Remove="Interfaces\IImageResizer.cs" />
+    <Compile Remove="Interfaces\IXCrossCropImage.cs" />
+    <Compile Remove="Models\Device\DeviceCommand.cs" />
+    <Compile Remove="Models\Device\Saga.cs" />
+    <Compile Remove="ViewModels\BleAwarePageViewModel.cs" />
+    <Compile Remove="ViewModels\BlePairingAwarePageViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="EmbeddedResources\1_fb_packed.bin" />
+    <None Remove="EmbeddedResources\2_fb_packed.bin" />
+    <None Remove="EmbeddedResources\3_fb_packed.bin" />
+    <None Remove="EmbeddedResources\4_fb_packed.bin" />
+    <None Remove="EmbeddedResources\ad1_fb_packed.bin" />
+    <None Remove="EmbeddedResources\ad2_fb_packed.bin" />
+    <None Remove="EmbeddedResources\ad3_fb_packed.bin" />
+    <None Remove="EmbeddedResources\Advertisement01_packed.bin" />
+    <None Remove="EmbeddedResources\Apple_fb_packed.bin" />
+    <None Remove="EmbeddedResources\badge_fb_packed.bin" />
+    <None Remove="EmbeddedResources\calibration_crosses.bin" />
+    <None Remove="EmbeddedResources\landscapebadge.bin" />
+    <None Remove="EmbeddedResources\logos_fb_packed.bin" />
+    <None Remove="EmbeddedResources\warning.bin" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedResources\ad1_fb_packed.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\ad2_fb_packed.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\ad3_fb_packed.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\Apple_fb_packed.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\badge_fb_packed.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmbeddedResources\logos_fb_packed.bin">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
+    <PackageReference Include="PropertyChanged.Fody" Version="4.0.3" />
+    <PackageReference Include="Xam.Plugin.Media" Version="5.0.1" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Syncfusion.Core.XForms">
+      <HintPath>..\libs\syncfusion\portable\Syncfusion.Core.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing">
+      <HintPath>..\libs\syncfusion\portable\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfComboBox.XForms">
+      <HintPath>..\libs\syncfusion\portable\Syncfusion.SfComboBox.XForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SfProgressBar.XForms">
+      <HintPath>..\libs\syncfusion\portable\Syncfusion.SfProgressBar.XForms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

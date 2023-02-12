@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:syncfusionHelper="clr-namespace:EinkStarter.Utilities.Syncfusion;assembly=EinkStarter"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:sfProgressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             x:Class="EinkStarter.Views.MainPage">
+    <ContentPage.Resources>
+        <Style x:Key="pageButtons" TargetType="Button">
+            <Setter Property="Margin" Value="5,10" />
+            <Setter Property="BorderWidth" Value="1" />
+            <Setter Property="BorderColor" Value="Black" />
+            <Setter Property="TextColor" Value="Black" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="HeightRequest" Value="40" />
+            <Setter Property="Padding" Value="5" />
+        </Style>
+    </ContentPage.Resources>
+    <StackLayout Margin="0, 10">
+        <Image Source="{Binding Image}" IsVisible="false"
+               HorizontalOptions="CenterAndExpand"
+               HeightRequest="200"
+               Aspect="AspectFit">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ShowImagePickerCommand}" />
+            </Image.GestureRecognizers>
+        </Image>
+        <combobox:SfComboBox HeightRequest="40" 
+                             Margin="20,10"
+                             DataSource="{Binding CardSlots}"
+                             IsEditableMode="False"
+                             DisplayMemberPath="SlotName" 
+                             Watermark="-Card Slot-"
+                             SelectedItem="{Binding SelectedCardSlot, Mode=TwoWay}">
+            <combobox:SfComboBox.Behaviors>
+                <syncfusionHelper:EventToCommandBehavior EventName="SelectionChanged" 
+                                                         Command="{Binding  CardSlotSelectionChangedCommand}"  />
+            </combobox:SfComboBox.Behaviors>
+        </combobox:SfComboBox>
+
+        <combobox:SfComboBox HeightRequest="40" 
+                             Margin="20,10"
+                             DataSource="{Binding ImageSlots}"
+                             IsEditableMode="False"
+                             DisplayMemberPath="SlotName" 
+                             Watermark="-Image Name-"
+                             SelectedItem="{Binding SelectedImageSlot, Mode=TwoWay}">
+            <combobox:SfComboBox.Behaviors>
+                <syncfusionHelper:EventToCommandBehavior EventName="SelectionChanged" 
+                                                         Command="{Binding  ImageSlotSelectionChangedCommand}"  />
+            </combobox:SfComboBox.Behaviors>
+        </combobox:SfComboBox>
+        <FlexLayout
+                Wrap="Wrap"
+                Direction="Row"
+                JustifyContent="SpaceEvenly"
+                AlignItems="Center"
+                AlignContent="Start"
+                Margin="0,6, 0, 0">
+            <Button Text="Connect" Style="{StaticResource pageButtons}" 
+                    Command="{Binding ConnectDeviceCommand}" IsEnabled="{Binding ConnectEnabled}"/>
+            
+            <Button Text="Write Card" Style="{StaticResource pageButtons}" 
+                    Command="{Binding WriteCardCommand}" IsEnabled="{Binding ButtonEnabled}"/>
+            <Button Text="Delete Card" Style="{StaticResource pageButtons}"
+                    BackgroundColor="Red"
+                    Command="{Binding DeleteCardCommand}" IsEnabled="{Binding ButtonEnabled}"/>
+            <Button Text="Display Card" Style="{StaticResource pageButtons}"
+                    Command="{Binding DisplayCardCommand}" IsEnabled="{Binding ButtonEnabled}"/>
+            <Button Text="Reset Device" Style="{StaticResource pageButtons}"
+                    Command="{Binding ResetDeviceCommand}" IsEnabled="{Binding ButtonEnabled}"/>
+            <Button Text="Disconnect" Style="{StaticResource pageButtons}"
+                    Command="{Binding DisconnectDeviceCommand}" IsEnabled="{Binding ButtonEnabled}"/>
+        </FlexLayout>
+        <Grid Margin="10,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="0" Orientation="Vertical"
+                         Margin="10,5"
+                         VerticalOptions="CenterAndExpand" >
+                <sfProgressBar:SfLinearProgressBar Progress="{Binding Progress}" Margin="0"  IsVisible="{Binding ProgressEnabled}" />
+                <Label HorizontalOptions="Start" VerticalOptions="StartAndExpand" IsVisible="{Binding ProgressEnabled}" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontSize="13" Text=" Writing Index:  " FontAttributes="Bold"/>
+                            <Span FontSize="13" Text="{Binding CurrentIndex}"/>
+                            <Span FontSize="13" Text=" of "/>
+                            <Span FontSize="13" Text="{Binding TotalIndex}"/>
+                            <Span FontSize="13" Text=", "/>
+                            <Span FontSize="13" Text="{Binding CompletionPercentage}"/>
+                            <Span FontSize="13" Text="% "/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label Text="{Binding ActivityDescription}" FontSize="13"></Label>
+            </StackLayout>
+            <StackLayout Grid.Column="1" Orientation="Vertical" HorizontalOptions="EndAndExpand" IsVisible="false">
+                <Label Text="Battery Level" FontSize="15" />
+                <Label HorizontalOptions="Start" VerticalOptions="StartAndExpand" >
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontSize="13" Text="{Binding BatteryLevel}"/>
+                            <Span FontSize="13" Text="% "/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
