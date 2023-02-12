@@ -58,7 +58,7 @@ nColorConvert is leveraged to convert source images into a valid color space.
     file) for each image to the output folder as illustrated in Figure
  5. if you would like to process an individual file, Run the following command from the root directory, nColorConvert.exe --res 640x400 --image image_name
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture4.gif)
+![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture4a.gif)
 
 Figure 4 NColorConvert Execution
 
@@ -163,14 +163,15 @@ This method deletes all cards on the device.
 This method disconnects and unpairs from the device.
 
 # Video Walkthrough 
-View a step by step video tutorial of the complete process, https://youtu.be/YYvBMbdJ7vo.
+View a step by step video tutorial of the complete process
+
+[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/YYvBMbdJ7vo)
 
 # Quick LInks
 **Application Interface Specification** (describes the Bluetooth specification for the device): https://github.com/emnovatedev/EinkStarter/blob/main/docs/Application_Interface_Document.pdf
 
-**Implementation Guide** (describes how to setup the device, configure the software and transfer images)
+**Implementation Guide** (Download acopy of this Implimentation Guide)
 
-**(Google Doc)**: https://docs.google.com/document/d/1gMHXYD3VF8Z6WygcCxgGo_G8ezXUfY-I/edit?usp=sharing&ouid=106371756306007537362&rtpof=true&sd=true.
 
-**(MS Word)**: https://github.com/emnovatedev/EinkStarter/blob/main/docs/Implementation%20Guide.docx 
+**(Download MS Word)**: https://github.com/emnovatedev/EinkStarter/blob/main/docs/Implementation%20Guide.docx 
 
