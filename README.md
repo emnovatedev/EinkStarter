@@ -14,8 +14,9 @@ The packaging includes one development board, along with a 4-inch E-ink screen. 
 
 **Implementation Guide** (describes how to setup the device, configure the software and transfer images)
 
-(Google Doc): https://docs.google.com/document/d/1gMHXYD3VF8Z6WygcCxgGo_G8ezXUfY-I/edit?usp=sharing&ouid=106371756306007537362&rtpof=true&sd=true.
-(MS Word): https://github.com/emnovatedev/EinkStarter/blob/main/docs/Implementation%20Guide.docx 
+**(Google Doc)**: https://docs.google.com/document/d/1gMHXYD3VF8Z6WygcCxgGo_G8ezXUfY-I/edit?usp=sharing&ouid=106371756306007537362&rtpof=true&sd=true.
+
+**(MS Word)**: https://github.com/emnovatedev/EinkStarter/blob/main/docs/Implementation%20Guide.docx 
 
 # Video Walkthrough 
 View a step by step video tutorial of the complete process, https://youtu.be/YYvBMbdJ7vo.
