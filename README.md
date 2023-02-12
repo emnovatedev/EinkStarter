@@ -18,4 +18,4 @@ The packaging includes one development board, along with a 4-inch E-ink screen. 
 (MS Word): https://github.com/emnovatedev/EinkStarter/blob/main/docs/Implementation%20Guide.docx 
 
 # Video Walkthrough 
-View a step by step video tutorial of the complete process, https://youtu.be/YYvBMbdJ7vo
+View a step by step video tutorial of the complete process, https://youtu.be/YYvBMbdJ7vo.
