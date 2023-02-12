@@ -10,7 +10,7 @@ After conversion, the images are loaded at runtime by the mobile application, al
 The packaging includes one development board, along with a 4-inch E-ink screen.  Upon unboxing, the screen must be attached to the development board as depicted in Figure 1 below.  After the screen is attached, power can be applied to test a proper connection.
 
 # Documentation 
-**Application Interface Specification** (describes the Bluetooth specification for the device): https://github.com/emnovatedev/EinkStarter/blob/main/docs/Application_Interface_Document.docx
+**Application Interface Specification** (describes the Bluetooth specification for the device): https://github.com/emnovatedev/EinkStarter/blob/main/docs/Application_Interface_Document.pdf
 
 **Implementation Guide** (describes how to setup the device, configure the software and transfer images)
 
