@@ -12,6 +12,7 @@ After conversion, the images are loaded at runtime by the mobile application, al
 The packaging includes one development board, along with a 4-inch E-ink screen.  Upon unboxing, the screen must be attached to the development board as depicted in Figure 1 below.  After the screen is attached, power can be applied to test a proper connection.
 
 ![This is an image](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/DevelopmentBoard.png)
+
 Figure 1 Dev Kit Contents
 # Power Methods
 The development board supports two power methods, with battery power being the default.  Only one power mode is supported at a time, so please make the best decision for the chosen application.
@@ -25,6 +26,7 @@ The default method to power the development board is to place two 2032 Coin Cell
 To use a Micro USB cable with the development board, remove the batteries and short the highlighted region using a jumper.  If there is never a desire to use battery power, a conductive epoxy can be applied to bridge this connection permanently.
 
 ![Figure 2 Usb Shortign Diagram](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/USB%20Shorting.png)
+
 Figure 2 Usb Shorting Diagram
 # Device Functions
 
@@ -41,6 +43,7 @@ The development board implements a state machine with the following states and r
 
 This guide makes use of nColorConvert and GalleryPalette2BIN executables, which were provided by E INK Holdings, Inc.  There is also a reference Xamarin Forms application that fully implements all supported functions, available as an IOS and Android mobile app.  The process follows a flow described in Figure 3.- 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture3.png)
+
 Figure 3:  Applicaiton Flow
 
 ## nColorConvert
@@ -128,16 +131,19 @@ Figure 9 Button State after Connecting
 This method loads a source file into memory and transfers it to the selected card slot.  Cards are pulled from the embedded resources folder inside of the EinkStarter project.  Copy the bin files that resulted from executing GalleryPallette2Bin into the DigmeStarter\EmbeddedResources .
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture10.png)
+
 Figure 10 Embedded Resources Folder
 
 After copying files to this folder, right click on each file and set its type to embedded resource and copy always.
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture11.png)
+
 Figure 11 Embedded Resources Setting
 
 Images are loaded at runtime and are available in the 2nd dropdown.  Select desired device slot, along with the image name.  Click the write card button to initiate the transfer process.  The card is divided into chunks based on the connection NTU.  Each chunk is set over one by one until they have been sent as per the application interface specification.  In the example in Figure 12, ad1_fb_packed.bin has been written to Slot 1 on the device.
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture12.gif)
+
 Figure 12 Writing Card Sequence
 
 ## Display Card
