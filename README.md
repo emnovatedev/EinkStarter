@@ -102,7 +102,9 @@ Figure 6 Deploying from Visual Studio for MAC
 ### Android
 
 Android deployment is a bit simpler.  After opening the project, simply make sure your phone is in development mode and USB debugging is enabled.  Once the phone is plugged into the computer, pressing the green play button as per the screenshot below will deploy the application to the connected device.  In Figure 7, there is a Google Pixel device ready to run the application .
+
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture7.png)
+
 Figure 7 Program Execution for Android Device
 
 # Mobile Application
