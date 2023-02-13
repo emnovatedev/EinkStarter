@@ -42,7 +42,7 @@ The development board implements a state machine with the following states and r
 # Software
 
 This guide makes use of nColorConvert and GalleryPalette2BIN executables, which were provided by E INK Holdings, Inc.  There is also a reference Xamarin Forms application that fully implements all supported functions, available as an IOS and Android mobile app.  The process follows a flow described in Figure 3.- 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture3.png)
+![Figure 3](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture3.png)
 
 Figure 3:  Applicaiton Flow
 
@@ -58,7 +58,7 @@ nColorConvert is leveraged to convert source images into a valid color space.
     file) for each image to the output folder as illustrated in Figure
  5. if you would like to process an individual file, Run the following command from the root directory, nColorConvert.exe --res 640x400 --image image_name
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture4a.gif)
+![Figure 4](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture4a.gif)
 
 Figure 4: NColorConvert Execution
 
@@ -78,7 +78,7 @@ GalleryPalette2Bin converts the resulting color space files into a binary format
 
 Note:  The resulting bin files are ready for transfer to the mobile application.
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture5.gif)
+![Figure 5](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture5.gif)
 
 Figure 5: GalleryPaletteConvert Execution
 
@@ -99,14 +99,14 @@ When installing Xamarin, ensure that both IOS and Android tools are installed if
 
 If IOS is needed, an active Apple Developer Account is required, along with the ability to set up a provisioning profile which is outside the scope of this documentation.  A compatible version of Xcode must also be installed on the MAC machine.  Once everything is configured, plug in the IOS device, and execute the program using Visual Studio for MAC.  In Figure 6, Iphone(2) is a physical device that is ready to run the application once the play button is pressed.
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture6.jpg)
+![Figure 6](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture6.jpg)
 Figure 6: Deploying from Visual Studio for MAC
 
 ### Android
 
 Android deployment is a bit simpler.  After opening the project, simply make sure your phone is in development mode and USB debugging is enabled.  Once the phone is plugged into the computer, pressing the green play button as per the screenshot below will deploy the application to the connected device.  In Figure 7, there is a Google Pixel device ready to run the application .
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture7.png)
+![Figure 7](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture7.png)
 
 Figure 7: Program Execution for Android Device
 
@@ -114,7 +114,7 @@ Figure 7: Program Execution for Android Device
 
 The mobile application implements the specification as outlined in the Application Interface Documentation.  The interface offers options to connect to the device, select the device slot of interest, and offers a menu of associated management actions for cards.
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture8.png)
+![Figure 8](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture8.png)
 
 Figure 8: Mobile Application Interface
 
@@ -122,7 +122,7 @@ Figure 8: Mobile Application Interface
 
 This method Initiates Bluetooth Scanning, and pairs with the development board.  Click this button once the device is powered and awaiting connection.  Upon a successful connection, the connect button is disabled, the remaining buttons are activated, and the scanning process stops.  
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture9.png)
+![Figure 9](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture9.png)
 
 Figure 9: Button State after Connecting
 
@@ -130,19 +130,19 @@ Figure 9: Button State after Connecting
 
 This method loads a source file into memory and transfers it to the selected card slot.  Cards are pulled from the embedded resources folder inside of the EinkStarter project.  Copy the bin files that resulted from executing GalleryPallette2Bin into the DigmeStarter\EmbeddedResources .
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture10.png)
+![Figure 10](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture10.png)
 
 Figure 10: Embedded Resources Folder
 
 After copying files to this folder, right click on each file and set its type to embedded resource and copy always.
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture11.png)
+![Figure 11](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture11.png)
 
 Figure 11: Embedded Resources Setting
 
 Images are loaded at runtime and are available in the 2nd dropdown.  Select desired device slot, along with the image name.  Click the write card button to initiate the transfer process.  The card is divided into chunks based on the connection NTU.  Each chunk is set over one by one until they have been sent as per the application interface specification.  In the example in Figure 12, ad1_fb_packed.bin has been written to Slot 1 on the device.
 
-![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture12.gif)
+![Figure 12](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture12.gif)
 
 Figure 12: Writing Card Sequence
 
@@ -171,8 +171,4 @@ View a step by step video tutorial of the complete process
 
 **Application Interface Specification** (describes the Bluetooth specification for the device): https://github.com/emnovatedev/EinkStarter/blob/main/docs/Application_Interface_Document.pdf
 
-**Implementation Guide** (Download a copy of this Implimentation Guide)
-
-
-**(Download MS Word)**: https://github.com/emnovatedev/EinkStarter/blob/main/docs/Implementation%20Guide.docx 
-
+**Implementation Guide** (Download in MS Word): https://github.com/emnovatedev/EinkStarter/blob/main/docs/Implementation%20Guide.docx
