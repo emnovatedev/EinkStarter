@@ -13,7 +13,7 @@ The packaging includes one development board, along with a 4-inch E-ink screen. 
 
 ![This is an image](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/DevelopmentBoard.png)
 
-Figure 1 Dev Kit Contents
+Figure 1: Dev Kit Contents
 # Power Methods
 The development board supports two power methods, with battery power being the default.  Only one power mode is supported at a time, so please make the best decision for the chosen application.
 
@@ -27,7 +27,7 @@ To use a Micro USB cable with the development board, remove the batteries and sh
 
 ![Figure 2 Usb Shortign Diagram](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/USB%20Shorting.png)
 
-Figure 2 Usb Shorting Diagram
+Figure 2: Usb Shorting Diagram
 # Device Functions
 
 The development board implements a state machine with the following states and rules:
@@ -52,7 +52,7 @@ nColorConvert is leveraged to convert source images into a valid color space.
 
  1. Source images should be 640 X 400 (or as close to possible for best
     results).
- 2.  Copy desired images to the docs\nColorConvert\input folder
+ 2. Copy desired images to the docs\nColorConvert\input folder
  3. Click on the nColorConvert.bat file
  4. This will copy an image_proof (image preview) and image_fp (source
     file) for each image to the output folder as illustrated in Figure
@@ -60,11 +60,11 @@ nColorConvert is leveraged to convert source images into a valid color space.
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture4a.gif)
 
-Figure 4 NColorConvert Execution
+Figure 4: NColorConvert Execution
 
 Notes:
 
- 1. you can review the GalleryPaletteConvert User Guide v1.2.1 User Guide for more specialized instruction.
+ 1. Review the GalleryPaletteConvert User Guide v1.2.1 User Guide for more specialized instruction.
  2. The source images included in the sample were provided by E-Ink holdings.
 
 ## GalleryPalette2BIN
@@ -80,7 +80,7 @@ Note:  The resulting bin files are ready for transfer to the mobile application.
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture5.gif)
 
-Figure 5 GalleryPaletteConvert Execution
+Figure 5: GalleryPaletteConvert Execution
 
 
 ## Mobile Application Configuration
@@ -100,7 +100,7 @@ When installing Xamarin, ensure that both IOS and Android tools are installed if
 If IOS is needed, an active Apple Developer Account is required, along with the ability to set up a provisioning profile which is outside the scope of this documentation.  A compatible version of Xcode must also be installed on the MAC machine.  Once everything is configured, plug in the IOS device, and execute the program using Visual Studio for MAC.  In Figure 6, Iphone(2) is a physical device that is ready to run the application once the play button is pressed.
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture6.jpg)
-Figure 6 Deploying from Visual Studio for MAC
+Figure 6: Deploying from Visual Studio for MAC
 
 ### Android
 
@@ -108,7 +108,7 @@ Android deployment is a bit simpler.  After opening the project, simply make sur
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture7.png)
 
-Figure 7 Program Execution for Android Device
+Figure 7: Program Execution for Android Device
 
 # Mobile Application
 
@@ -116,7 +116,7 @@ The mobile application implements the specification as outlined in the Applicati
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture8.png)
 
-Figure 8 Mobile Application Interface
+Figure 8: Mobile Application Interface
 
 ## Connect to Device
 
@@ -124,7 +124,7 @@ This method Initiates Bluetooth Scanning, and pairs with the development board. 
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture9.png)
 
-Figure 9 Button State after Connecting
+Figure 9: Button State after Connecting
 
 ## Write Card
 
@@ -132,19 +132,19 @@ This method loads a source file into memory and transfers it to the selected car
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture10.png)
 
-Figure 10 Embedded Resources Folder
+Figure 10: Embedded Resources Folder
 
 After copying files to this folder, right click on each file and set its type to embedded resource and copy always.
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture11.png)
 
-Figure 11 Embedded Resources Setting
+Figure 11: Embedded Resources Setting
 
 Images are loaded at runtime and are available in the 2nd dropdown.  Select desired device slot, along with the image name.  Click the write card button to initiate the transfer process.  The card is divided into chunks based on the connection NTU.  Each chunk is set over one by one until they have been sent as per the application interface specification.  In the example in Figure 12, ad1_fb_packed.bin has been written to Slot 1 on the device.
 
 ![enter image description here](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture12.gif)
 
-Figure 12 Writing Card Sequence
+Figure 12: Writing Card Sequence
 
 ## Display Card
 
@@ -165,12 +165,13 @@ This method disconnects and unpairs from the device.
 # Video Walkthrough 
 View a step by step video tutorial of the complete process
 
-[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/YYvBMbdJ7vo)
+[![Watch the video](https://img.youtube.com/vi/YYvBMbdJ7vo/default.jpg)](https://youtu.be/YYvBMbdJ7vo)
 
 # Quick LInks
+
 **Application Interface Specification** (describes the Bluetooth specification for the device): https://github.com/emnovatedev/EinkStarter/blob/main/docs/Application_Interface_Document.pdf
 
-**Implementation Guide** (Download acopy of this Implimentation Guide)
+**Implementation Guide** (Download a copy of this Implimentation Guide)
 
 
 **(Download MS Word)**: https://github.com/emnovatedev/EinkStarter/blob/main/docs/Implementation%20Guide.docx 
