@@ -56,7 +56,9 @@ nColorConvert is leveraged to convert source images into a valid color space.
  3. Click on the nColorConvert.bat file
  4. This will copy an image_proof (image preview) and image_fp (source
     file) for each image to the output folder as illustrated in Figure
- 5. if you would like to process an individual file, Run the following command from the root directory, nColorConvert.exe --res 640x400 --image image_name
+ 5. if you would like to process an individual file, Run the following command from the root directory:
+
+ nColorConvert.exe --res 640x400 --image image_name
 
 ![Figure 4](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/Picture4a.gif)
 
@@ -74,7 +76,9 @@ GalleryPalette2Bin converts the resulting color space files into a binary format
  1. Copy all source files to the docs\nColorConvert\input folder
  2. Click on the GalleryPalette2BIN.bat file
  3. This will create image_fb.bin files for each source file in the output folder as illustrated in Figure 5.
- 4. In order to process an individual file, Run the following command from the root directory, GalleryPalette2BIN.exe --epd AC040TC1 --image image_name_fb
+ 4. In order to process an individual file, Run the following command from the root directory:
+
+GalleryPalette2BIN.exe --epd AC040TC1 --image image_name_fb
 
 Note:  The resulting bin files are ready for transfer to the mobile application.
 
