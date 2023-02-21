@@ -14,6 +14,15 @@ The packaging includes one development board, along with a 4-inch E-ink screen. 
 ![This is an image](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/DevelopmentBoard.png)
 
 Figure 1: Dev Kit Contents
+
+### Attaching Screen
+
+Before using your dev kit, you must attach your screen.  Please following the instructions below.
+![This is an image](https://raw.githubusercontent.com/emnovatedev/EinkStarter/main/docs/images/attachscreen.gif)
+
+
+A printable version of the instuctions is located here:  https://github.com/emnovatedev/EinkStarter/blob/main/docs/ScreenGuide.pdf
+
 # Power Methods
 The development board supports two power methods, with battery power being the default.  Only one power mode is supported at a time, so please make the best decision for the chosen application.
 
